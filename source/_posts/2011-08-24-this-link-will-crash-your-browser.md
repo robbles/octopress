@@ -21,7 +21,7 @@ The content then follows after a comma.
 
 Here is the contents of that link, when decoded, stripped out of the URI and
 prettified:
-{% highlight html %}
+{% codeblock lang:html %}
 <script>
     setTimeout(function(){
         a=atob(location.href.split(',')[1]);
@@ -30,7 +30,7 @@ prettified:
     }, 0)
 </script>
 <div style="float:left">$</div>
-{% endhighlight %}
+{% endcodeblock %}
 
 ## How does it work?
 
