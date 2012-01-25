@@ -31,7 +31,7 @@ It looks like it's possible to change the speed at any time from any event in
 the page. 
 
 This is most of what I added:
-{% highlight javascript %}
+{% codeblock lang:javascript %}
 
 var mobile = false;
 try {
@@ -55,7 +55,7 @@ var sketch = function(p) {
     ...
 }
 
-{% endhighlight %}
+{% endcodeblock %}
 
 The [full javascript version](https://gist.github.com/864953) is on GitHub.
 I think it's a pretty simple example of how to convert a Processing sketch to

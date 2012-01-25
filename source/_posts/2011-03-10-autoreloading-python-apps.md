@@ -39,7 +39,7 @@ scheduled at a predefined interval. I wrote a handler for calling the
 is a return code that's used to indicate the application ended because of a code
 change, instead of just crashing.
 
-{% highlight python %}
+{% codeblock lang:python %}
 
 from autoreload import code_changed
 import logging, gtk, subprocess
@@ -63,7 +63,7 @@ def watch_files():
         sys.exit(RESTART_CODE)
     else:
         return True
-{% endhighlight %}
+{% endcodeblock %}
 
 Now I needed the main part of the activity runner, which sets up the options and
 environment variables. I used `optparse` to add two command-line options, a
@@ -71,7 +71,7 @@ watch flag (which does what you'd expect), and a timeout flag. The timeout flag
 exits the application after a given number of seconds, which is sometimes handy
 for testing.
 
-{% highlight python %}
+{% codeblock lang:python %}
 import optparse
 
 parser = optparse.OptionParser()
@@ -87,7 +87,7 @@ options, args = parser.parse_args()
 if options.timeout:
     log.info('Timeout after %d seconds' % options.timeout)
     gtk.timeout_add(1000 * options.timeout, exit)
-{% endhighlight %}
+{% endcodeblock %}
 
 This next part is trickier. The first block should only execute in the child
 process, but comes first so that it can disable starting a child process of its
@@ -99,7 +99,7 @@ main loop ends when this happens. I changed the script here to allow for
 errors, by adding a brief delay when a non-zero, non-restart code is returned,
 instead of just quitting (the original behaviour)
 
-{% highlight python %}
+{% codeblock lang:python %}
 if os.environ.get("EXIT_ON_CHANGE") == "true":
     gtk.timeout_add(1000, watch_files)
 
@@ -125,17 +125,17 @@ if options.watch:
                 # If sugar-activity returns an error code, restart after a delay
                 log.error('Activity did not exit safely!')
                 time.sleep(ERROR_SLEEP_TIME)
-{% endhighlight %}
+{% endcodeblock %}
 
 Since the master process is stuck in that loop until the application exits, all
 that's left now is to start the app! I'm leaving out some Sugar-specific
 environment variable stuff, but this is where you'd call your application entry
 point.
 
-{% highlight python %}
+{% codeblock lang:python %}
 from sugar.activity import main                                                 
 main.main() 
-{% endhighlight %}
+{% endcodeblock %}
 
 This might seem like a lot of effort just for an auto-reloading script, but in
 my case it had a more important use. I'm now able to develop on my Mac while

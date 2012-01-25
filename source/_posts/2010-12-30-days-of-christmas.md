@@ -8,7 +8,7 @@ started from an argument with my sister about whether the gifts are cumulative
 or not (i.e. do you end up with twelve partridges, or just one?). Sadly, this
 program doesn't really answer the question, any more than singing it would.
 
-{% highlight python %}
+{% codeblock lang:python %}
 gifts = ['Partridge in a pear tree', 'Turtle doves', 'French hens',
 'Calling birds', 'Golden rings', 'Geese-a-Laying',
 'Swans-a-Swimming', 'Maids-a-Milking', 'Ladies Dancing',
@@ -29,7 +29,7 @@ def named(num):
             'seven','eight','nine','ten','eleven','twelve')[num]
 
 days_of_christmas(12)
-{% endhighlight %}
+{% endcodeblock %}
 
 It turns out you get 364 gifts if they are cumulative, which, oddly enough, is
 exactly enough for you to get a present every day for a year *except*

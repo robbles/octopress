@@ -12,23 +12,23 @@ interpreter behaves is far from what I'd call "sane". There's no history, and if
 you screw up the order of brackets, or get lost in a multiline expression, you
 get to experience this wonderful prompt:
 
-{% highlight javascript %}
+{% codeblock lang:javascript %}
 > var x = function() {
 
 [object Context]:1
 
 
 ... 
-{% endhighlight %}
+{% endcodeblock %}
 
 Fortunately, the node.js docs suggest an alternative, using the handy
 [rlwrap](http://utopia.knoware.nl/~hlub/rlwrap/rlwrap.html) tool, which wraps
 any command inside a readline shell and gives you about a million options. I
 extended the provided example a bit, and ended up with this:
 
-{% highlight bash %}
+{% codeblock lang:bash %}
 alias node='env NODE_NO_READLINE=1 rlwrap -p Green -S "node >>> " node'
-{% endhighlight %}
+{% endcodeblock %}
 
 This tells node not to use it's built-in readline functionality, replaces the
 prompt with a custom colored one, and automatically starts maintaining a history

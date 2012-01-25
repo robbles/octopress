@@ -14,7 +14,7 @@ without being able to run the server though. What I wanted was to have a
 workflow like the following, where I could extend the `deploy` command to
 bundle the installed packages from the virtualenv automatically:
 
-{% highlight bash %}
+{% codeblock lang:bash %}
 
 rob@macpro: ~/ $ workon appengine
 (appengine)rob@macpro: ~/ $ cdvirtualenv myapp/
@@ -25,7 +25,7 @@ rob@macpro: ~/ $ workon appengine
 (appengine)rob@macpro: myapp/ $ ./manage.py deploy
 ...
 
-{% endhighlight %}
+{% endcodeblock %}
 
 Luckily, it turns out the [django-nonrel and
 djangoappengine](http://www.allbuttonspressed.com/projects/djangoappengine)

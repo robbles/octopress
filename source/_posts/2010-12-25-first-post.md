@@ -17,7 +17,7 @@ Porting of old posts from my other attempts at blogging might happen at some
 point in the distant future, when I'm very bored. Definitely not tonight.
 Here's a random piece of Python code to show how awesome Pygments support is:
 
-{% highlight python %}
+{% codeblock lang:python %}
 
 def circle(size, fore, back):
     for y in range(size):
@@ -29,5 +29,5 @@ def circle(size, fore, back):
 
 circle(20, 'x', ' ')
 
-{% endhighlight %}
+{% endcodeblock %}
 
