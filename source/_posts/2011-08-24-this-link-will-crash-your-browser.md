@@ -1,6 +1,7 @@
 ---
 layout: post
 title: This link will crash your browser
+comments: true
 ---
 
 <a href="data:text/html;base64,PHNjcmlwdD5zZXRUaW1lb3V0KGZ1bmN0aW9uKCl7YT1hdG9iKGxvY2F0aW9uLmhyZWYuc3BsaXQoJywnKVsxXSk7Yj1kb2N1bWVudC5ib2R5LmlubmVySFRNTDt3aW5kb3cubG9jYXRpb249J2RhdGE6dGV4dC9odG1sO2Jhc2U2NCwnK2J0b2EoYStiKX0sMCk8L3NjcmlwdD48ZGl2IHN0eWxlPSJmbG9hdDpsZWZ0Ij4kPC9kaXY+" target="_BLANK" style="margin:20px 0;font-size:1.2em; text-decoration:underline">
@@ -8,14 +9,12 @@ Here it is. Go ahead and click on it, we both know you can't resist.
 </a>
 
 If you look closely at the location that link's pointing to, you'll notice it's
-not a website. It's actually a [Data
-URI](http://en.wikipedia.org/wiki/Data_URI_scheme), a special kind of address
+not a website. It's actually a [Data URI](http://en.wikipedia.org/wiki/Data_URI_scheme), a special kind of address
 that allows you to embed data for a browser directly into the link itself. 
 
 Data URIs begin with `data:` and a mimetype to tell the browser how to interpret
 the content. After that comes an optional directive `;base64`, which means that
-the following content is encoded as a
-[Base64](http://en.wikipedia.org/wiki/Base64#HTML) string. In this case, the
+the following content is encoded as a [Base64](http://en.wikipedia.org/wiki/Base64#HTML) string. In this case, the
 content is encoded to make it easier to process the URL from inside the page.
 The content then follows after a comma.
 
