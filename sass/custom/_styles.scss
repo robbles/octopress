@@ -135,8 +135,13 @@ body > footer{
 @media only screen and (min-width: 550px) {
 
   body > header h1{
-      background: url("/favicon.png") no-repeat 0 0px;
+      background: url("/favicon.png") no-repeat 8px 9px;
       padding-left: 65px;
+      @include transition(background .5s);
+  }
+
+  body > header h1:hover {
+      background: url("/favicon-hl.png") no-repeat 8px 9px;
   }
 
   body > header h2 { padding-left: 60px; }
