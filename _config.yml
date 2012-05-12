@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://blog.doteight.com
-title: Rob's Blog
-subtitle: A subtitle will end up here somehow.
+title: Rob O'Dwyer
+#subtitle: A blog about coding, software development, and other hacks.
 author: Rob O'Dwyer
 simple_search: http://google.com/search
-description: Rob's Blog.
+description: Rob O'Dwyer's Blog.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
