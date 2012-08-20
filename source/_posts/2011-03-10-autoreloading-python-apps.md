@@ -10,6 +10,8 @@ from the Django project's manage.py runserver command, and takes the form of an
 activity launcher script.  You could use this for auto-reloading of any
 single-threaded Python application, not just GUI applications.
 
+<!-- more -->
+
 Although the code monitoring part is basically the same as the Django server's,
 I added an feature that's always seemed missing to me - When an
 exception is thrown starting up the program, it prints out a stack trace, waits

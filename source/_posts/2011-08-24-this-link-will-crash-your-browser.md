@@ -18,6 +18,8 @@ the following content is encoded as a [Base64](http://en.wikipedia.org/wiki/Base
 content is encoded to make it easier to process the URL from inside the page.
 The content then follows after a comma.
 
+<!-- more -->
+
 Here is the contents of that link, when decoded, stripped out of the URI and
 prettified:
 {% codeblock lang:html %}

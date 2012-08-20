@@ -17,6 +17,8 @@ example given on the Processing.js site ([Writing Processing Code with
 Javascript](http://processingjs.org/learning)), which made it simple to
 add the next two changes.
 
+<!-- more -->
+
 The performance of HTML canvas on iOS (and probably other mobile OSs as well) is
 pretty poor, so I thought it would be a good idea to drop the framerate a bit. A
 simple browser check (using a jQuery plugin) is enough to do this.
